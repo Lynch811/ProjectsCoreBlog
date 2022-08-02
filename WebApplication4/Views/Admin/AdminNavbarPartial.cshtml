@@ -1,0 +1,143 @@
+﻿<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <img alt="image" class="rounded-circle" src="~/inspinia-gh-pages/img/profile_small.jpg" />
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="block m-t-xs font-bold">Talha Arslan</span>
+                        <span class="text-muted text-xs block">Yazılım Stajyeri <b class="caret"></b></span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a class="dropdown-item" href="~/inspinia-gh-pages/profile.html">Profile</a></li>
+                        <li><a class="dropdown-item" href="~/inspinia-gh-pages/contacts.html">Contacts</a></li>
+                        <li><a class="dropdown-item" href="~/inspinia-gh-pages/mailbox.html">Mailbox</a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#" onclick="confirmexit()" >Çıkış Yap</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    IN+
+                </div>
+            </li>
+            <li>
+                <a href="/Admin/Widget/Index/"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span>  </a>
+            </li>
+            <li>
+                <a href="/Admin/Chart/Index/"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Grafikler</span>  </a>
+            </li>
+
+
+
+            <li>
+                <a href="mailbox.html"><i class="fa fa-envelope-o"></i> <span class="nav-label">Mesajlar </span><span class="label label-warning float-right">0/0</span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a href="/Admin/AdminMessage/Inbox/">Gelen Kutusu</a></li>
+                    <li><a href="/Admin/AdminMessage/SendBox/">Giden Kutusu</a></li>
+                    <li><a href="/Admin/AdminMessage/ComposeMessage/">Yeni Mesaj Oluştur</a></li>
+                </ul>
+            </li>
+            @*<li>
+                <a href="~/inspinia-gh-pages/metrics.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">Metrikler</span>  </a>
+            </li>*@
+            <li>
+                <a href="/Admin/Category/Index/"><i class="fa fa-group"></i> <span class="nav-label">Kategoriler</span>  </a>
+            </li>
+            <li>
+                <a href="/Admin/AdminBlog/Index/"><i class="fa fa-list-alt"></i> <span class="nav-label">Bloglar</span>  </a>
+            </li>
+            <li>
+                <a href="/Admin/AdminComment/Index/"><i class="fa fa-comment-o"></i> <span class="nav-label">Yorumlar</span>  </a>
+            </li>
+            <li>
+                <a href="/Admin/Writer/Index/"><i class="fa fa-user-o"></i> <span class="nav-label">Yazarlar</span>  </a>
+            </li>
+            @*<li>
+                <a href="~/inspinia-gh-pages/metrics.html"><i class="fa fa-cogs"></i> <span class="nav-label">Ayarlar</span>  </a>
+            </li>*@
+            <li>
+                <a href="/Admin/AdminRol/Index"><i class="fa fa-magic"></i> <span class="nav-label">Roller</span>  </a>
+            </li>
+            @*<li>
+                <a href="~/inspinia-gh-pages/metrics.html"><i class="fa fa-bell-o"></i> <span class="nav-label">Bildirimler</span>  </a>
+            </li>*@
+            @*<li>
+                <a href="~/inspinia-gh-pages/metrics.html"><i class="fa fa-phone"></i> <span class="nav-label">İletişim</span>  </a>
+            </li>*@
+            @*<li>
+                <a href="~/inspinia-gh-pages/metrics.html"><i class="fa fa-info-circle"></i> <span class="nav-label">Hakkımızda</span>  </a>
+            </li>*@
+            <li>
+                <a href="/Admin/Blog/ExportStaticExcelBlogList/"><i class="fa fa-line-chart"></i> <span class="nav-label">Excel Statik</span></a>
+            </li>
+            <li>
+                <a href="/Admin/Blog/ExportDynamicExcelBlogList/"><i class="fa fa-line-chart"></i> <span class="nav-label">Excel Dinamik</span></a>
+            </li>
+            <li>
+                <a href="#" onclick="confirmexit()"><i class="fa fa-sign-out"></i> <span class="nav-label">Çıkış Yap</span></a>
+            </li>
+            @*<li>
+                    <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">Galeri</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="~/inspinia-gh-pages/basic_gallery.html">Lightbox Gallery</a></li>
+                        <li><a href="~/inspinia-gh-pages/slick_carousel.html">Slick Carousel</a></li>
+                        <li><a href="~/inspinia-gh-pages/carousel.html">Bootstrap Carousel</a></li>
+
+                    </ul>
+                </li>*@
+        </ul>
+
+    </div>
+    <script>
+        function confirmexit() {
+
+            Swal.fire({
+                title: 'Çıkış Yapmakmı İstiyorsun ',
+                text: "",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Evet',
+                cancelButtonText:'Hayır'
+            }).then((result) => {
+                if (result.isConfirmed) {
+
+                    window.location.href = "/Login/Index/";
+
+                }
+            })
+        }
+    </script>
+</nav>
+
+@*
+            burada çalışalar için güzel bişiler var proje bittikten sonra bakarız buralara güzel işler çıkar
+    <li>
+        <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">App Views</span>  <span class="float-right label label-primary">SPECIAL</span></a>
+        <ul class="nav nav-second-level collapse">
+            <li><a href="~/inspinia-gh-pages/contacts.html">Contacts</a></li>
+            <li><a href="~/inspinia-gh-pages/profile.html">Profile</a></li>
+            <li><a href="~/inspinia-gh-pages/profile_2.html">Profile v.2</a></li>
+            <li><a href="~/inspinia-gh-pages/contacts_2.html">Contacts v.2</a></li>
+            <li><a href="~/inspinia-gh-pages/projects.html">Projects</a></li>
+            <li><a href="~/inspinia-gh-pages/project_detail.html">Project detail</a></li>
+            <li><a href="~/inspinia-gh-pages/activity_stream.html">Activity stream</a></li>
+            <li><a href="~/inspinia-gh-pages/teams_board.html">Teams board</a></li>
+            <li><a href="~/inspinia-gh-pages/social_feed.html">Social feed</a></li>
+            <li><a href="~/inspinia-gh-pages/clients.html">Clients</a></li>
+            <li><a href="~/inspinia-gh-pages/full_height.html">Outlook view</a></li>
+            <li><a href="~/inspinia-gh-pages/vote_list.html">Vote list</a></li>
+            <li><a href="~/inspinia-gh-pages/file_manager.html">File manager</a></li>
+            <li><a href="~/inspinia-gh-pages/calendar.html">Calendar</a></li>
+            <li><a href="~/inspinia-gh-pages/issue_tracker.html">Issue tracker</a></li>
+            <li><a href="~/inspinia-gh-pages/blog.html">Blog</a></li>
+            <li><a href="~/inspinia-gh-pages/article.html">Article</a></li>
+            <li><a href="~/inspinia-gh-pages/faq.html">FAQ</a></li>
+            <li><a href="~/inspinia-gh-pages/timeline.html">Timeline</a></li>
+            <li><a href="~/inspinia-gh-pages/pin_board.html">Pin board</a></li>
+        </ul>
+    </li>
+*@

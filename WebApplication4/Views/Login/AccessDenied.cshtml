@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - 403 Forbidden</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/403-forbidden/dist/style.css">
+
+</head>
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="container">
+        <h1>
+            4<div class="lock">
+                <div class="top"></div><div class="bottom"></div>
+            </div>3
+        </h1><p>Bu Sayfaya Erişim İzniniz Yok</p>
+             <button class="button" style="vertical-align:middle" id="anasayfayagit"><span> Ana Sayfa  </span></button>
+    </div>
+    <!-- partial -->
+    <script>
+        document.querySelector("#anasayfayagit").onclick = function ()
+        {
+            window.location.href ="/Blog/Index/"
+        }
+    </script>
+    <script src="~/403-forbidden/dist/script.js"></script>
+
+</body>
+</html>
